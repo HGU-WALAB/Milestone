@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RadarChart from "./components/RadarChart";
+import Category from "./components/Category";
 import { getUsers, getActivities } from "./api/api";
 
 interface User {
@@ -16,6 +17,14 @@ interface Activity {
   category4: number;
   category5: number;
 }
+
+const category: string[] = [
+  "Category 1",
+  "Category 2",
+  "Category 3",
+  "Category 4",
+  "Category 5",
+];
 
 const App: React.FC = () => {
   const [users, setUsers] = useState<User[]>([]);
@@ -126,6 +135,11 @@ const App: React.FC = () => {
           }}
         />
       )}
+
+      {/* 유민 코드 */}
+      {category.map((item, index) => (
+        <Category key={index} category={item} />
+      ))}
     </div>
   );
 };
