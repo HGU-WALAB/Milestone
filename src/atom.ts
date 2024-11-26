@@ -1,7 +1,7 @@
 import { atom } from 'recoil';
 
-// Atom for managing the current sid
+// 'currentSidAtom'은 현재의 sid 값을 관리하는 Atom
 export const currentSidAtom = atom<number>({
-  key: 'currentSid', // unique ID for the atom
-  default: 22100058, // default sid value
+  key: 'currentSid',
+  default: 22100058,
 });
