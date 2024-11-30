@@ -1,1 +1,7 @@
-//채채 스마트
+function SignUpPage () {
+    return (
+        <div></div>
+    )
+};
+
+export default SignUpPage;

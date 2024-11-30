@@ -37,7 +37,7 @@ interface CategoryProps {
 }
 
 // Category 컴포넌트: 카테고리 별로 활동 목록을 보여주는 컴포넌트
-function Category({ category, categoryIndex }: CategoryProps) {
+function Category ({ category, categoryIndex }: CategoryProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false); // 카테고리 펼침 상태
   const currentSid = useRecoilValue(currentSidAtom); // Recoil을 사용해 현재 SID 값 가져오기
   const [activityList, setActivityList] = useState<Activity[]>([]); // 활동 목록 상태

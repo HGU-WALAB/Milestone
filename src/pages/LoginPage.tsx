@@ -1,1 +1,7 @@
-//솔미 바부
+function LoginPage () {
+    return (
+        <div></div>
+    );
+};
+
+export default LoginPage;
