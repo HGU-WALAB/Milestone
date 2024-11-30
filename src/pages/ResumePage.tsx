@@ -1,6 +1,4 @@
-// ResumePage.tsx
-
-const ResumePage: React.FC = () => {
+function ResumePage () {
     return <div>내 이력서 페이지입니다.</div>;
 };
 

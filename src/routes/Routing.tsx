@@ -1,4 +1,3 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeaderBar from '../components/HeaderBar';
 import ResumePage from '../pages/ResumePage';
@@ -7,20 +6,24 @@ import ProfilePage from '../pages/ProfilePage';
 import App from '../App';
 import { Outlet } from 'react-router-dom';
 
-const Layout: React.FC = () => (
-  <>
-    <HeaderBar />
-    <main>
-      <Outlet /> {/* 하위 라우트를 렌더링 */}
-    </main>
-  </>
-);
+function Layout () {
+  return (
+    <>
+      <HeaderBar />
+      <main>
+        <Outlet /> {/* 하위 라우트를 렌더링 */}
+      </main>
+    </>
+  );
+};
 
-const Routing: React.FC = () => {
+export default Layout;
+
+export const Routing = () => {
   return (
     <Router>
       <Routes>
-        {/* Layout이 HeaderBar를 포함 */}
+        {/* Layout이 HeaderBar를 포함하므로 HeaderBar를 중첩 라우터에 포함하지 X */}
         <Route path="/" element={<Layout />}>
           <Route index element={<App />} />
           <Route path="resume" element={<ResumePage />} />
@@ -31,5 +34,3 @@ const Routing: React.FC = () => {
     </Router>
   );
 };
-
-export default Routing;

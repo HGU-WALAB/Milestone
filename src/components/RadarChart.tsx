@@ -28,7 +28,7 @@ interface RadarChartProps {
 }
 
 // RadarChart 컴포넌트 정의
-const RadarChart: React.FC<RadarChartProps> = ({ skillData }) => {
+const RadarChart = ({ skillData }: RadarChartProps) => {
   // 차트의 옵션 설정
   const options: ChartOptions<"radar"> = {
     responsive: true, // 화면 크기에 맞춰 차트 크기 자동 조정

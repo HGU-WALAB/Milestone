@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { RecoilRoot } from "recoil";
 import RadarChart from "./components/RadarChart";
 import Category from "./components/Category";
@@ -23,7 +23,7 @@ interface Activity {
 // 카테고리 이름 리스트
 const categories: string[] = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5"];
 
-const App: React.FC = () => {
+function App () {
   // 상태 변수 선언: 사용자 정보, 활동 정보, 개인 데이터, 평균 데이터
   const [users, setUsers] = useState<User[]>([]);
   const [activities, setActivities] = useState<Activity[]>([]);
