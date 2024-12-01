@@ -1,0 +1,31 @@
+.header-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: #2f2e2e;
+  color: #fff;
+}
+
+.logo a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+
+.nav-links {
+  margin-right: 2rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 1rem;
+}
+
+.nav-links a:hover {
+  color: #8ca1bf;
+}
